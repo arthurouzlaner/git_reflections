@@ -1,0 +1,5 @@
+create new repository:
+- git remote origin
+- remote add origin https://github.com/arthurouzlaner/git_reflections.git
+- git push origin master
+- git remote -v
