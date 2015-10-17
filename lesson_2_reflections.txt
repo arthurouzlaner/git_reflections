@@ -10,3 +10,39 @@ How is the staging area different from the working directory and the repository?
 - Repository is an up to date version control area where all the rules apply
 - They are related as the staging area is a mid-place when moving a working directory to a repository
 
+- "git diff" compares between working directroy and the stating area
+- "git diff --staged" compares between the staging area and the HEAD
+- "git reset --hard" discards any changes in the staging area, BEWARE that this action is irreversible
+- "git checkout master" will check out the HEAD if you are not working with it
+
+How can you use the staging area to make sure you have one commit per logical change?
+- I can add all my changes to the staging area without commiting them
+- Once I added all the changes to the logical change I can commit the logical change
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+- If I want to make a few different vesions of the program
+- Instead of making a few copies of the program and keeping track of them, I can use branches
+- If I want to try a new feature I can try it on a separate branch and decide later on if to include it
+- I don't have to log all my changes to the main branch because that will clutter the commits
+- Branches can make it easier to track parallel changes to the code without cluttering the commits
+
+- git log --graph --oneline master coins
+
+How do the diagrams help you visualize the branch structure?
+- Diagrams help view the commits as a tree, more natural way for us to see the logical structure
+
+- "git gc" runs git garbage collector and deletes all unreachable commits
+- It runs by itself from time to time.
+- "git merge" is also merges the specified branches into the currently checked out branch
+- "git show <commit_id>" compares the commit_id version to its parent (useful after branching)
+- to remove the lable of the branch: "git branch -d <branch_name>"
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+- When we merge 2 branches, we add all the added code and delete all deleted code from the most recent ancestor of the 2 branches
+- We represent it the way we do in the diagram to show that there is only one branch remains
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+- Pro is that it saves a lot of time for commits that are obvious (different areas of the code were affected)
+- When you merge manually, it is safer but takes a lot of time because you'll verify the changes by yourself
+
+
