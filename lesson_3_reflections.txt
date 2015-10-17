@@ -3,3 +3,9 @@ create new repository:
 - remote add origin https://github.com/arthurouzlaner/git_reflections.git
 - git push origin master
 - git remote -v
+
+When would you want to use a remote repository rather than keeping all your work local?
+- when I have a release that is working and with no bugs
+- when several people are working on the same project
+- periodically so I'll have an access to my files from everywhere
+
